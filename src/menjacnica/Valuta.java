@@ -18,6 +18,7 @@ public class Valuta {
 	}
 
 	public void setNaziv(String naziv) {
+		if(naziv==null) throw new RuntimeException("Morate uneti naziv");
 		this.naziv = naziv;
 	}
 
@@ -26,6 +27,7 @@ public class Valuta {
 	}
 
 	public void setSkr_naziv(String skr_naziv) {
+		if(skr_naziv==null) throw new RuntimeException("Morate uneti skraceni naziv");
 		this.skr_naziv = skr_naziv;
 	}
 
@@ -34,6 +36,7 @@ public class Valuta {
 	}
 
 	public void setKursevi(LinkedList<Kurs> kursevi) {
+		if(kursevi.isEmpty()) throw new RuntimeException("Lista je prazna");
 		this.kursevi = kursevi;
 	}
 

@@ -10,6 +10,7 @@ public class Menjacnica {
 		}
 
 		public void setValute(LinkedList<Valuta> valute) {
+			if(valute.isEmpty()) throw new RuntimeException("Lista je prazna");
 			this.valute = valute;
 		}
 

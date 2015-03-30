@@ -22,6 +22,7 @@ public class Kurs {
 		}
 
 		public void setKupovni(double kupovni) {
+			if(kupovni==0) throw new RuntimeException("Morate uneti kurs");
 			this.kupovni = kupovni;
 		}
 
@@ -30,6 +31,7 @@ public class Kurs {
 		}
 
 		public void setSrednji(double srednji) {
+			if(srednji==0) throw new RuntimeException("Morate uneti kurs");
 			this.srednji = srednji;
 		}
 
@@ -38,6 +40,7 @@ public class Kurs {
 		}
 
 		public void setProdajni(double prodajni) {
+			if(prodajni==0) throw new RuntimeException("Morate uneti kurs");
 			this.prodajni = prodajni;
 		}
 
