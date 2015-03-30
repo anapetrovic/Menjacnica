@@ -1,14 +1,21 @@
 package menjacnica;
 
 import java.util.GregorianCalendar;
+import java.util.LinkedList;
 
 import specifikacijaInterfejsa.MenjacnicaInterfejs;
 
 public class KursnaLista implements MenjacnicaInterfejs {
+	private LinkedList<Kurs> kursevi=new LinkedList<Kurs>();
 
 	public void dodajKurs(double kupovni, double prodajni, double srednji,
 			GregorianCalendar datum) {
-		// TODO Auto-generated method stub
+		Kurs novi =new Kurs(kupovni,prodajni, srednji,datum);
+		kursevi.add(novi);
+		
+
+		
+		
 
 	}
 
