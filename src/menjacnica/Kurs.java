@@ -10,12 +10,8 @@ public class Kurs {
 	    private double prodajni;
 	    private GregorianCalendar datum;
 	    
-	    public Kurs(double kupovni, double srednji, double prodajni, GregorianCalendar datum){
-	        this.kupovni = kupovni;
-	        this.srednji = srednji;
-	        this.prodajni = prodajni;
-	        this.datum = datum;
-	    }
+	  
+
 
 		public double getKupovni() {
 			return kupovni;

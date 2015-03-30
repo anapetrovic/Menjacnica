@@ -11,7 +11,12 @@ public class KursnaLista implements MenjacnicaInterfejs {
 
 	public void dodajKurs(double kupovni, double prodajni, double srednji,
 			GregorianCalendar datum) {
-		Kurs noviKurs = new Kurs(kupovni, srednji, prodajni, datum);
+		Kurs noviKurs = new Kurs();
+		noviKurs.setDatum(datum);
+		noviKurs.setKupovni(kupovni);
+		noviKurs.setProdajni(prodajni);
+		noviKurs.setSrednji(srednji);
+		
 		kursevi.add(noviKurs);
 	}
 
