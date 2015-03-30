@@ -37,4 +37,39 @@ public class Valuta {
 		this.kursevi = kursevi;
 	}
 
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((kursevi == null) ? 0 : kursevi.hashCode());
+		result = prime * result + ((naziv == null) ? 0 : naziv.hashCode());
+		result = prime * result
+				+ ((skr_naziv == null) ? 0 : skr_naziv.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (!(obj instanceof Valuta)) 
+			return false; 
+		Valuta v = (Valuta)(obj); 
+		if (naziv.equals(v.getNaziv()))
+			return true; 
+		
+		else return false;
+
+	}
+
+	@Override
+	public String toString() {
+		String s="";
+		for(int i=0; i<kursevi.size();i++){
+			 s="\n"+kursevi.get(i).toString();
+		}
+		return "Valuta:" + naziv + " (" + skr_naziv
+				+ ") kursevi:" + s ;
+	}
+	
+	
+
 }
